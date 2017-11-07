@@ -12,7 +12,27 @@
 		7BE712591FAE20420022422D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE712571FAE20420022422D /* Main.storyboard */; };
 		7BE7125B1FAE20420022422D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7125A1FAE20420022422D /* Assets.xcassets */; };
 		7BE7125E1FAE20420022422D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7125C1FAE20420022422D /* LaunchScreen.storyboard */; };
+		7BE7126A1FAE20A60022422D /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE712651FAE206B0022422D /* AudioKit.framework */; };
+		7BE7126B1FAE20A60022422D /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE712651FAE206B0022422D /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7BE7126C1FAE20A60022422D /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE712661FAE206C0022422D /* AudioKitUI.framework */; };
+		7BE7126D1FAE20A60022422D /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE712661FAE206C0022422D /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7BE712701FAE20CA0022422D /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7126F1FAE20CA0022422D /* Listener.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7BE7126E1FAE20A60022422D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7BE7126D1FAE20A60022422D /* AudioKitUI.framework in Embed Frameworks */,
+				7BE7126B1FAE20A60022422D /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7BE712501FAE20420022422D /* TestTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +42,9 @@
 		7BE7125A1FAE20420022422D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE7125D1FAE20420022422D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BE7125F1FAE20420022422D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BE712651FAE206B0022422D /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		7BE712661FAE206C0022422D /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = "<group>"; };
+		7BE7126F1FAE20CA0022422D /* Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE7126C1FAE20A60022422D /* AudioKitUI.framework in Frameworks */,
+				7BE7126A1FAE20A60022422D /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +65,9 @@
 			children = (
 				7BE712521FAE20420022422D /* TestTap */,
 				7BE712511FAE20420022422D /* Products */,
+				7BE712651FAE206B0022422D /* AudioKit.framework */,
+				7BE712661FAE206C0022422D /* AudioKitUI.framework */,
+				7BE712671FAE209E0022422D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +84,20 @@
 			children = (
 				7BE712531FAE20420022422D /* AppDelegate.swift */,
 				7BE712551FAE20420022422D /* ViewController.swift */,
+				7BE7126F1FAE20CA0022422D /* Listener.swift */,
 				7BE712571FAE20420022422D /* Main.storyboard */,
 				7BE7125A1FAE20420022422D /* Assets.xcassets */,
 				7BE7125C1FAE20420022422D /* LaunchScreen.storyboard */,
 				7BE7125F1FAE20420022422D /* Info.plist */,
 			);
 			path = TestTap;
+			sourceTree = "<group>";
+		};
+		7BE712671FAE209E0022422D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +110,7 @@
 				7BE7124C1FAE20420022422D /* Sources */,
 				7BE7124D1FAE20420022422D /* Frameworks */,
 				7BE7124E1FAE20420022422D /* Resources */,
+				7BE7126E1FAE20A60022422D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BE712561FAE20420022422D /* ViewController.swift in Sources */,
+				7BE712701FAE20CA0022422D /* Listener.swift in Sources */,
 				7BE712541FAE20420022422D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +314,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRLL528258;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestTap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.TestTap;
@@ -291,6 +333,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRLL528258;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestTap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.TestTap;
